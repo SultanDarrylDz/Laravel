@@ -42,4 +42,11 @@ Route::get('nama/{nama?}', [DataSiswaControler::class, 'nama']);
 Route::resource('user', UserController::class);
 
 
+Route::get('profile', function(){
+    return view('profile');
+});
+
+
+
+
 
