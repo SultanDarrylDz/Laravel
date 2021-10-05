@@ -33,7 +33,7 @@
 @php
     $warna = '<div style="color: blue">Sultan Darryl Dzulfikar</div>'
 @endphp
-
+    {{-- tes --}}
 {!!$warna!!}
 
 </body>

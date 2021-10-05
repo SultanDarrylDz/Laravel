@@ -46,7 +46,9 @@ Route::get('profile', function(){
     return view('profile');
 });
 
-
+Route::get('album', function(){
+    return view('album');
+});
 
 
 
