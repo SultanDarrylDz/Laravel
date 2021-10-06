@@ -44,11 +44,12 @@ Route::resource('user', UserController::class);
 
 Route::get('profile', function(){
     return view('profile');
-});
+}) -> name('profile');
 
 Route::get('album', function(){
     return view('album');
-});
+}) -> name('album');
+
 
 
 
