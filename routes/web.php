@@ -3,6 +3,7 @@
 use App\Http\Controllers\DataSiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BookController;
 
 // Route::get('1', function () {
 //     return 'satu';
@@ -63,11 +64,12 @@ use App\Http\Controllers\UserController;
 //     return view('profile.album');
 // }) -> name('album');
 
-// Route::get('index', function () {
-//     return view('profile.index');
-// }) -> name('index');
+Route::get('index', function () {
+     return view('profile.index');
+})->name('index');
 
 Route::resource('user', UserController::class);
+Route::resource('book', BookController::class);
 
 // show
 // Route::resource('user/{$id}', UserController::class, 'show');

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Models\User;
+use App\Models\Book;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class BookController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        // halaman utama
-        // url/user
-        $user = Book::all();
-        return view('admin.book.index', compact('books'));
+        $buku = Book::all();
+        return view ('book.index', compact('buku'));
+        // return Book::all();
     }
 
     /**
@@ -27,11 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        // halaman menambah data
-        // url/user/create
-            $depan = 'Darryl';
-            $belakang = 'Dzulfikar';
-            return view('user.create', compact('depan','belakang'));
+        //
     }
 
     /**
@@ -42,9 +37,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // proses menambahkan data
-        // url/user
-        // post
+        //
     }
 
     /**
@@ -55,9 +48,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        // halaman menampilkan data by $id
-        // url/user/{$id}
-        return 'Halaman show' .$id;
+        //
     }
 
     /**
@@ -68,9 +59,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        // halaman edit data by $id
-        // url/user/{$id}/edit
-        return 'Halaman edit' .$id;
+        //
     }
 
     /**
@@ -82,8 +71,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // proses edit data by $id
-        // url/user/{$id}
+        //
     }
 
     /**
@@ -94,7 +82,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        // proses hapus data by $id
-        // url/user/{$id}
+        //
     }
 }

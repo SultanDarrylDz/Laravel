@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @php
+    <!-- @php
         $satu = 1;
         $dua = 2;
         $tiga = 3;
@@ -17,17 +17,20 @@
     <p> Baris ke {{ $dua }} </p>
     <p> Baris ke {{ $tiga }} </p>
     <p> Baris ke {{ $empat }} </p>
-    <p> Baris ke {{ $lima }} </p> --}}
+    <p> Baris ke {{ $lima }} </p> --}} -->
 
+@foreach ($buku as $data)
+    Nama Buku : {{ $data->nama_buku}}<br>
+@endforeach
 
-    @for ($i = 1; $i <= 10; $i++)
+    <!-- @for ($i = 1; $i <= 10; $i++)
         @if ($i % 2 == 1)
             Bilangan ke {{$i}} Ganjil <br>
         @else
             Bilangan ke {{$i}} Genap <br>
         @endif
         <br>
-    @endfor
+    @endfor -->
 
     <a class="btn btn-primary btn-lg" href="{{ route ('album') }}">Album</a>
 
