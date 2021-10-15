@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBooksTable extends Migration
+class CreatePengarangsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,11 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
+        Schema::create('pengarangs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('pengarang_id');
-            $table->foreign('pengarang_id')
-            -> references('id')
-            -> on('pengarangs')
-            -> onDelete('restrict');
-            $table->string('nama_buku');
-            $table->integer('jumlah_halaman')->default(0);
-            $table->string('translate_judul_buku')->nullable();
+            $table->string('nama_pengarang');
+            $table->string('email')->nullable();
+            $table->string('tlp')->default(0);
             $table->timestamps();
         });
     }
